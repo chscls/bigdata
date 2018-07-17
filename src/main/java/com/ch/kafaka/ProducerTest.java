@@ -1,3 +1,5 @@
+package com.ch.kafaka;
+
 import org.apache.kafka.clients.producer.*;
 
 import java.util.Properties;
