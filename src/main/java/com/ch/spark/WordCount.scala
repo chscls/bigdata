@@ -11,10 +11,11 @@ object WordCount {
     println(xx)
 
     System.setProperty("hadoop.home.dir", "D:/hadoop-3.0.3")
-    val conf = new SparkConf().setAppName("WordCount").setMaster("local")
+    val conf = new SparkConf().setAppName("WordCount").setMaster("spark://master-ch:7077").setJars(List("C:/Users/ch/eclipse-workspace/bigdata/out/artifacts/bigdata_jar/bigdata.jar"))
     val sc = new SparkContext(conf)
     val textFile = sc.textFile(inputFile)
     val wordCount = textFile.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey((a, b) => a + b)
     wordCount.foreach(println)
+    sc.stop()
   }
 }
