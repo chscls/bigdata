@@ -37,6 +37,7 @@ public class HbasePhoenixDataSourceConfig {
 
     @Bean(name = "hbasePhoenixDataSource")
     public DataSource hbasePhoenixDataSource() {
+        System.setProperty("hadoop.home.dir", "D:/hadoop-3.0.3");
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(driverClass);
         dataSource.setUrl(url);

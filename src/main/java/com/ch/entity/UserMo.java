@@ -1,10 +1,22 @@
 package com.ch.entity;
 
 
+import java.math.BigDecimal;
+
 public class UserMo {
 
     private Long id;
     private String name;
+
+    public BigDecimal getMoney() {
+        return money;
+    }
+
+    public void setMoney(BigDecimal money) {
+        this.money = money;
+    }
+
+    private BigDecimal money;
 
 
     public Long getId() {
