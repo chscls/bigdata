@@ -41,6 +41,7 @@ public class HbasePhoenixDataSourceConfig {
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(driverClass);
         dataSource.setUrl(url);
+
         return dataSource;
     }
 
