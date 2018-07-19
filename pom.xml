@@ -55,11 +55,7 @@
         <artifactId>phoenix-core</artifactId>
         <version>4.14.0-HBase-1.4</version>
     </dependency>
-    <dependency>
-        <groupId>io.netty</groupId>
-        <artifactId>netty-all</artifactId>
-        <version>4.0.4.Final</version>
-    </dependency>
+
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
